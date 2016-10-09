@@ -1,11 +1,11 @@
 # grunt-wp-boilerplate
 
-> Create a WordPress plugin with [grunt-init][] based on the [WordPress Plugin Boilerplate](https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate)
+> Create a WordPress plugin with grunt-init based on the [WordPress Plugin Boilerplate](https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate)
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
 ## Installation
-If you haven't already done so, install [grunt-init][]:
+If you haven't already done so, install grunt-init:
 
 ```
 npm install -g grunt-init
@@ -16,14 +16,15 @@ Once grunt-init is installed, place this template in your `~/.grunt-init/` direc
 ### Linux/Mac Users
 
 ```
-git clone git@github.com:fooplugins/grunt-wp-boilerplate.git ~/.grunt-init/wp-boilerplate
+git clone https://github.com/alvaromartinezmajado/grunt-wp-boilerplate.git ~/.grunt-init/wp-boilerplate
 ```
 
 ### Windows Users
 
 ```
-git clone git@github.com:fooplugins/grunt-wp-boilerplate.git %USERPROFILE%/.grunt-init/wp-boilerplate
+git clone https://github.com/alvaromartinezmajado/grunt-wp-boilerplate.git %USERPROFILE%/.grunt-init/wp-boilerplate
 ```
+(Not tested, but should work)
 
 ## Usage
 
@@ -46,4 +47,6 @@ _Note that this template will generate files in the current directory, so be sur
 
 ## Credit
 
-Most of this is copied from [grunt-wp-plugin](https://github.com/10up/grunt-wp-plugin) by 10up, so thanks to them!
+Original credits from [grunt-wp-plugin](https://github.com/10up/grunt-wp-plugin) were: "Most of this is copied from [grunt-wp-plugin](https://github.com/10up/grunt-wp-plugin) by 10up, so thanks to them!"
+
+Forked from [fooplugins/grunt-wp-boilerplate](https://github.com/fooplugins/grunt-wp-boilerplate) by [@alvaromartinezmajado](http://github.com/alvaromartinezmajado) to update included [Devin Vinson's WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate) to latest version ([923fbaf](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/commits/master), Dec 11, 2015), to add some sanitization, to allow customization of copyright year and to add this note in the credits.
