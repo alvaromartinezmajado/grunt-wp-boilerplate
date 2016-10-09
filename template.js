@@ -3,6 +3,7 @@
  * https://github.com/fooplugins/grunt-wp-boilerplate
  *
  * Copyright (c) 2014 Brad Vincent, FooPlugins LLC
+ * Copyright (c) 2016 Álvaro Martínez Majado <a@alvaro.xyz>
  * Licensed under the MIT License
  */
 
@@ -30,31 +31,43 @@ exports.template = function( grunt, init, done ) {
         {
             name: 'version',
             message: 'Plugin Version',
-            default: '0.0.1'
+            default: '1.0.0'
         },
 		init.prompt( 'homepage', 'http://wordpress.org/plugins' ),
 		init.prompt( 'author_name' ),
+        {
+            name: 'copyright_year',
+            message: 'Copyright year',
+            default: '1970'
+        },
 		init.prompt( 'author_email' ),
 		init.prompt( 'author_url' ),
-        init.prompt( 'github_repo' )
+        {
+            name: 'github_repo',
+            message: 'Github repo',
+						default: ''
+        },
 	], function( err, props ) {
 
         props.safe_name = props.title.replace(/[\W_]+/g, '_');
+
+        props.slug = props.slug.replace(/[\W_]+/g, '-');
+        props.slug = props.slug.toLowerCase();
 
 		// Files to copy and process
 		var files = init.filesToCopy( props );
 
         //delete a file if necessary :
         //delete files[ 'public/assets/js/public.js'];
-		
+
 		console.log( files );
-		
+
 		// Actually copy and process files
 		init.copyAndProcess( files, props, {noProcess: 'assets/**' } );
-		
+
 		// Generate package.json file
 		//init.writePackageJSON( 'package.json', props );
-		
+
 		// Done!
 		done();
 	});
